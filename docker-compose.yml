@@ -1,0 +1,10 @@
+version: '2'
+services:
+  webserver:
+    image: php:8.1-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal
